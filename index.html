@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ms
+        {
+            width: 30%;
+            height: 60vh;
+            margin-top: 2%;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 10%;
+            border: 1px solid black;
+            background-color: cyan;
+        }
+        h3
+        {
+            font-size: 40px;
+        }
+        img
+        {
+            width: 50%;
+            height: 55%;
+            border-radius: 50%;
+            margin-top: 2%;
+        }
+        .butto
+        {
+            width: 20%;
+            height: 6vh;
+            font-size: 20px;
+            margin-top: 2%;
+            border-radius: 10px;
+            background-color: rgba(19, 28, 28, 0.136);
+            border: none;
+        }
+        .button
+        {
+            width: 20%;
+            height: 5vh;
+            font-size: 20px;
+            margin-top: 2%;
+            border-radius: 10px;
+            background-color: aqua;
+            border: none;
+            text-align: center;
+            padding-top: 2%;
+            display: none;
+            margin: 0 2%;
+        }
+        .ss
+        {
+            width: 33%;
+            margin-top: 2%;
+        }
+        @media(max-width:600px)
+        {
+            .ms
+            {
+                width: 100%;
+            }
+            .display
+            {
+                flex-wrap: wrap;
+            }
+            .button
+            {
+                
+                width: 55%;
+                height: 4vh;
+                padding-top: 13px;
+                font-size: 20px;
+                text-align: center;
+            }
+            img
+            {
+                width: 60%;
+                height: 30vh;
+                margin-top: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;" class="display">
+    <div class="ss" style="display: flex; flex-wrap: wrap;">
+        <div class="button"onmouseover="madhab()" id="no1"></div>
+    </div>
+    
+       <div class="ms" id="nn">
+        <img src="imgae/boy.jpg"alt="madhab" id="img">
+        <h3 id="h3">Do You Love Me</h3>
+        <button class="butto" onclick="pritam()">Yes</button>
+        <button onmouseover="madhab()" id="No" class="butto" style="margin-left: 5%;">No</button>
+    </div>
+    <div class="ss" style="display: flex; flex-wrap: wrap;">
+        <div class="button"onmouseover="madhab()"id="no6"></div>
+    </div>
+    </div>
+    <script>
+        var i=1;
+        function madhab()
+        {
+            // 1
+            if(i==1)
+            {
+                document.getElementById('No').style.display="none";
+                i++;    
+                document.getElementById('no1').innerHTML="NO";
+                document.getElementById('no1').style.display="inline-block";
+            }
+            //2
+            else if(i==2)
+            {
+                document.getElementById('no1').style.display="none";
+                i++;
+                document.getElementById('no6').innerHTML="NO";
+                document.getElementById('no6').style.display="inline-block"; 
+                document.getElementById('no6').style.marginTop="70%";
+                document.getElementById('no6').style.marginLeft="70%";
+            }
+            //1
+             else if(i==3)
+            {
+                document.getElementById('no6').style.display="none";
+                i++;
+                document.getElementById('no1').innerHTML="NO";
+                document.getElementById('no1').style.display="inline-block"; 
+                document.getElementById('no1').style.marginTop="70%";
+                document.getElementById('no1').style.marginLeft="60%";
+            }
+            //2
+             else if(i==4)
+            {
+                document.getElementById('no1').style.display="none";
+                i++;
+                document.getElementById('no6').innerHTML="NO";
+                document.getElementById('no6').style.display="inline-block"; 
+                document.getElementById('no6').style.marginLeft="5%";
+                document.getElementById('no6').style.marginTop="0";
+            }
+            //1
+            else if(i==5)
+            {
+                document.getElementById('no6').style.display="none";
+                i++;
+                document.getElementById('no1').innerHTML="NO";
+                document.getElementById('no1').style.display="inline-block"; 
+                document.getElementById('no1').style.marginLeft="5%";
+                
+            }
+            //2
+             else if(i==6)
+            {
+                document.getElementById('no1').style.display="none";
+                i++;
+                document.getElementById('no6').innerHTML="NO";
+                document.getElementById('no6').style.display="inline-block"; 
+                document.getElementById('no6').style.marginTop="60%";
+            }
+            //1
+             else if(i==7)
+            {
+                document.getElementById('no6').style.display="none";
+                i++;
+                document.getElementById('no1').innerHTML="NO";
+                document.getElementById('no1').style.display="inline-block"; 
+                document.getElementById('no1').style.marginTop="0";
+                document.getElementById('no1').style.marginLeft="60%";
+            }
+            //2madhab
+            else if(i==8)
+            {
+                document.getElementById('no1').style.display="none";
+                i++;
+                document.getElementById('no6').innerHTML="NO";
+                document.getElementById('no6').style.display="inline-block"; 
+                document.getElementById('no6').style.marginTop="30%";
+                document.getElementById('no6').style.marginLeft="30%";
+            }
+            //1 
+            else
+            {
+                document.getElementById('no6').style.display="none";
+                document.getElementById('no1').innerHTML="NO";
+                document.getElementById('no1').style.display="inline-block";
+                document.getElementById('no1').style.marginLeft="0";
+                i=2;
+            }
+        }
+        function pritam()
+        {
+            document.getElementById('h3').innerHTML="Love You Too 😘";
+            document.getElementById('No').style.display="none";
+            document.getElementById('img').src="imgae/confirm.jpg";
+        }
+    </script>
+</body>
+</html>
